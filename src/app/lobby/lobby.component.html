@@ -1,10 +1,10 @@
-<form>
+<form [formGroup]="form">
   <mat-form-field class="example-full-width">
     <mat-label>Name</mat-label>
-    <input matInput autofocus>
+    <input matInput autofocus formControlName="name">
   </mat-form-field>
 
-  <a mat-fab aria-label="join" routerLink="chat">
+  <button mat-fab aria-label="join" type="submit" (click)="join()" [disabled]="form.controls.name.invalid">
     <mat-icon>keyboard_arrow_right</mat-icon>
-  </a>
+  </button>
 </form>
