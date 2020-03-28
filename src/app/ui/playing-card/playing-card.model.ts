@@ -1,4 +1,5 @@
 export interface PlayingCard {
+  id: number;
   suit: Suit;
   rank: Rank;
   side: Side;
