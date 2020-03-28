@@ -1,4 +1,5 @@
-
-<div class="card {{ card.suit }} {{ card.rank }}">
-  <div [class]="card.side"></div>
+<div class="card-container">
+  <div (click)="turn()" class="card {{ getTurnedClass() }}">
+    <div class="{{ card.turned ? 'face' : 'back' }}"></div>
+  </div>
 </div>

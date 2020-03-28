@@ -15,4 +15,12 @@ export class PlayingCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // hacky solution for now
+  getTurnedClass(): string {
+    return this.card.turned ? `${this.card.suit} ${this.card.rank}` : '';
+  }
+
+  turn() {
+    this.card.turned = !this.card.turned;
+  }
 }

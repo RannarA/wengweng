@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  height: 5.5rem;
+  display: flex;
+  justify-content: center;
+
+  .col {
+    width: 3.875rem;
+    margin: 0 20px;
+  }
+}

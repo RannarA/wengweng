@@ -8,10 +8,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { GameComponent } from './game/game.component';
 import { PlayingCardModule } from '../ui/playing-card/playing-card.module';
 import { MatButtonModule } from '@angular/material/button';
+import { CardPyramidComponent } from './card-pyramid/card-pyramid.component';
 
 
 @NgModule({
-  declarations: [ChatComponent, AgoraVideoComponent, GameComponent],
+  declarations: [
+    ChatComponent,
+    AgoraVideoComponent,
+    GameComponent,
+    CardPyramidComponent
+  ],
     imports: [
         CommonModule,
         ChatRoutingModule,

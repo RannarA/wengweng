@@ -2,7 +2,7 @@ export interface PlayingCard {
   id: number;
   suit: Suit;
   rank: Rank;
-  side: Side;
+  turned: boolean;
 }
 
 export enum Suit {
