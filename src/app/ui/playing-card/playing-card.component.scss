@@ -5,4 +5,11 @@
 .card {
   left: 0;
   top: 0;
+
+  height: 5.5rem;
+  width: 3.875rem;
+
+  &.hidden {
+    visibility: hidden;
+  }
 }

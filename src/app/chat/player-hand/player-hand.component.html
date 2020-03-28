@@ -1,0 +1,3 @@
+<div class="col" *ngFor="let card of player?.cards; let i = index">
+  <app-playing-card [card]="card" (selected)="selectCard(i)"></app-playing-card>
+</div>

@@ -3,6 +3,7 @@ export interface PlayingCard {
   suit: Suit;
   rank: Rank;
   turned: boolean;
+  hidden: boolean; // this is a hack for selected cards
 }
 
 export enum Suit {

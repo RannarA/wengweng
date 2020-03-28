@@ -9,6 +9,11 @@ import { GameComponent } from './game/game.component';
 import { PlayingCardModule } from '../ui/playing-card/playing-card.module';
 import { MatButtonModule } from '@angular/material/button';
 import { CardPyramidComponent } from './card-pyramid/card-pyramid.component';
+import { PlayerHandComponent } from './player-hand/player-hand.component';
+import { PlayersComponent } from './players/players.component';
+import { UserActionsComponent } from './user-actions/user-actions.component';
+import { ActiveCardsComponent } from './active-cards/active-cards.component';
+import { VictimSelectionComponent } from './victim-selection/victim-selection.component';
 
 
 @NgModule({
@@ -16,7 +21,12 @@ import { CardPyramidComponent } from './card-pyramid/card-pyramid.component';
     ChatComponent,
     AgoraVideoComponent,
     GameComponent,
-    CardPyramidComponent
+    CardPyramidComponent,
+    PlayerHandComponent,
+    PlayersComponent,
+    UserActionsComponent,
+    ActiveCardsComponent,
+    VictimSelectionComponent
   ],
     imports: [
         CommonModule,

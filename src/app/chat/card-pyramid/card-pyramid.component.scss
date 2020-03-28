@@ -4,12 +4,12 @@
 }
 
 .row {
-  height: 5.5rem;
   display: flex;
   justify-content: center;
 
   .col {
+    height: 5.5rem;
     width: 3.875rem;
-    margin: 0 20px;
+    margin: 0 5px;
   }
 }

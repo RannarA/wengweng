@@ -1,0 +1,9 @@
+<h3>Choices: {{ drinksToGive }}</h3>
+
+<button mat-raised-button
+        *ngFor="let name of playerNames; let i = index"
+        [style.background-color]="getColor(i)"
+        [disabled]="!drinksToGive"
+        (click)="select(name)">{{ name }}</button>
+
+<button mat-raised-button color="accent" (click)="finish.emit()">Finish turn</button>

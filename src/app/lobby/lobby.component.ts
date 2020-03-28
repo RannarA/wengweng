@@ -24,7 +24,10 @@ export class LobbyComponent implements OnInit {
     }
 
     this.playerService.save(this.form.value).subscribe(
-      (response: HttpResponse<Player>) => this.router.navigateByUrl('/chat'),
+      (response: HttpResponse<Player>) => {
+        this.router.navigateByUrl('/chat');
+        sessionStorage.setItem('name', response.body.name);
+      },
       (err: HttpErrorResponse) => console.error(err)
     );
   }

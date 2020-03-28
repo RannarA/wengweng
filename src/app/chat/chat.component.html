@@ -1,7 +1,16 @@
-<section>
-<!--  <app-agora-video></app-agora-video>-->
-</section>
+<mat-grid-list cols="2" rowHeight="fit">
+  <mat-grid-tile colspan="1" rowspan="2">
+<!--      <app-agora-video></app-agora-video>-->
+  </mat-grid-tile>
 
-<section>
-  <app-game></app-game>
-</section>
+  <mat-grid-tile colspan="1" rowspan="2">
+    <app-card-pyramid [deck]="(gameState | async)?.pyramid"></app-card-pyramid>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">
+    <app-user-actions [player]="player | async"
+                      [gameState]="gameState | async"
+                      (move)="makeMove($event)"
+                      (startGame)="startGame()"></app-user-actions>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,5 +1,5 @@
 <div class="card-container">
-  <div (click)="turn()" class="card {{ getTurnedClass() }}">
+  <div (click)="select()" class="card {{ getTurnedClass() }}" [class.hidden]="card.hidden">
     <div class="{{ card.turned ? 'face' : 'back' }}"></div>
   </div>
 </div>

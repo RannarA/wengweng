@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { PlayingCard } from './playing-card.model';
 
 @Component({
@@ -10,6 +10,8 @@ import { PlayingCard } from './playing-card.model';
 export class PlayingCardComponent implements OnInit {
   @Input() card: PlayingCard;
 
+  @Output() selected = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +22,7 @@ export class PlayingCardComponent implements OnInit {
     return this.card.turned ? `${this.card.suit} ${this.card.rank}` : '';
   }
 
-  turn() {
-    this.card.turned = !this.card.turned;
+  select() {
+    this.selected.emit();
   }
 }
